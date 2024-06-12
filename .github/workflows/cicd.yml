@@ -31,11 +31,11 @@ jobs:
     # TODO: Complete the steps in CICD.md
 
     - name: Uploading build files
-    uses: actions/upload-artifact@v2
- if: github.event_name == 'push' && github.ref == 'refs/heads/main'    
-    with:
-      name: artifact
-      path: ./dist
+      uses: actions/upload-artifact@v2
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'    
+      with:
+        name: artifact
+        path: ./dist
   deploy:
     name: deploy
     runs-on: ubuntu-latest
