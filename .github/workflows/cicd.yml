@@ -40,7 +40,9 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs : test-build
+    permissions:
+        contents:write
+        
     steps :
     - name: Downloading artifact
       uses: actions/download-artifact@v2
