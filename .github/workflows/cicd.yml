@@ -45,8 +45,8 @@ jobs:
     - name: Downloading artifact
       uses: actions/download-artifact@v2
       with:
-      name: artifact
-      path: ./dist
+        name: artifact
+        path: ./dist
     - name: Deploying to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
