@@ -11,9 +11,18 @@ in the TODO).
 4. Run the test and see if it passes. If not, try and figure out why.
 You might have forgotten a step. See the sum.test.js and figure out the missing piece.
 */
+import { getInfo } from '../../src/helpers/getInfo';
 
-test('REPLACE_ME', () => {
-    expect("REPLACE_ME").toBe("REPLACE_ME");
+test('returns a string containing names separated by a comma', () => {
+  const country= [
+    { name: 'Spanish' },
+    { name: 'Catalan' },
+    { name: 'Basque'},
+    { name: 'Galician' }
+];
+  const resultExpected=getInfo(country);
+    expect( resultExpected).toBe("Spanish, Catalan, Basque, Galician");
+  
 });
 
 
